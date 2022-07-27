@@ -15,10 +15,10 @@ services:
     depends_on:
       - db
     ports:
-      - 3000:3000
+      - 3001:3001
     environment:
       MYSQL_USER: root
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: 1234
       HOSTNAME: db
       JWT_SECRET: secretJWT
   db:
@@ -30,7 +30,7 @@ services:
       - 3306:3306
       - 33060:33060
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 1234
 
 networks:
   default:
